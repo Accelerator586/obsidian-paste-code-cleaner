@@ -22,10 +22,8 @@ export class PasteCodeCleanerSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: 'Paste Code Cleaner Settings' });
-
 		new Setting(containerEl)
-			.setName('Auto-clean on paste')
+			.setName('Auto clean on paste')
 			.setDesc('Automatically remove trailing whitespace when pasting text. This applies to all pasted content, not just code blocks.')
 			.addToggle(toggle => toggle
 				.setValue(this.plugin.settings.autoCleanOnPaste)
